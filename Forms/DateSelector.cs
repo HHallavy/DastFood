@@ -14,7 +14,7 @@ namespace DastFood.forms
     {
         public DateSelector()
         {
-	    MessageBox.Show("Seyed's Form");
+	    MessageBox.Show("Say Form");
             InitializeComponent();
         }
     }
