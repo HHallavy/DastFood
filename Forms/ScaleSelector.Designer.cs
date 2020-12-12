@@ -28,78 +28,91 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.button3 = new System.Windows.Forms.Button();
+            this.biggerScale = new System.Windows.Forms.Button();
+            this.smallerScale = new System.Windows.Forms.Button();
+            this.ingScale = new System.Windows.Forms.ComboBox();
+            this.OK = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // button1
+            // biggerScale
             // 
-            this.button1.Font = new System.Drawing.Font("B Mitra", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.button1.Location = new System.Drawing.Point(12, 25);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(95, 34);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "واحد بزرگتر";
-            this.button1.UseVisualStyleBackColor = true;
+            this.biggerScale.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.biggerScale.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.biggerScale.Font = new System.Drawing.Font("B Mitra", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.biggerScale.Location = new System.Drawing.Point(12, 50);
+            this.biggerScale.Name = "biggerScale";
+            this.biggerScale.Size = new System.Drawing.Size(95, 34);
+            this.biggerScale.TabIndex = 0;
+            this.biggerScale.Text = "واحد بزرگتر";
+            this.biggerScale.UseVisualStyleBackColor = false;
+            this.biggerScale.Click += new System.EventHandler(this.biggerScale_Click);
             // 
-            // button2
+            // smallerScale
             // 
-            this.button2.Font = new System.Drawing.Font("B Mitra", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.button2.Location = new System.Drawing.Point(264, 25);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(95, 34);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "واحد کوچکتر";
-            this.button2.UseVisualStyleBackColor = true;
+            this.smallerScale.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.smallerScale.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.smallerScale.Font = new System.Drawing.Font("B Mitra", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.smallerScale.Location = new System.Drawing.Point(118, 50);
+            this.smallerScale.Name = "smallerScale";
+            this.smallerScale.Size = new System.Drawing.Size(95, 34);
+            this.smallerScale.TabIndex = 1;
+            this.smallerScale.Text = "واحد کوچکتر";
+            this.smallerScale.UseVisualStyleBackColor = false;
+            this.smallerScale.Click += new System.EventHandler(this.smallerScale_Click);
             // 
-            // comboBox1
+            // ingScale
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.ingScale.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.ingScale.Font = new System.Drawing.Font("B Nazanin", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.ingScale.FormattingEnabled = true;
+            this.ingScale.Items.AddRange(new object[] {
             "دانه",
             "کیلوگرم",
             "گرم",
             "لیتر",
             "میلی لیتر",
             "بسته 5 تایی",
-            "بسته چندتایی"});
-            this.comboBox1.Location = new System.Drawing.Point(125, 32);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
-            this.comboBox1.TabIndex = 2;
+            "بسته"});
+            this.ingScale.Location = new System.Drawing.Point(12, 12);
+            this.ingScale.Name = "ingScale";
+            this.ingScale.Size = new System.Drawing.Size(201, 32);
+            this.ingScale.TabIndex = 2;
             // 
-            // button3
+            // OK
             // 
-            this.button3.Font = new System.Drawing.Font("B Mitra", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.button3.Location = new System.Drawing.Point(12, 86);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(95, 34);
-            this.button3.TabIndex = 3;
-            this.button3.Text = "تایید";
-            this.button3.UseVisualStyleBackColor = true;
+            this.OK.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.OK.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.OK.Font = new System.Drawing.Font("B Mitra", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.OK.Location = new System.Drawing.Point(12, 101);
+            this.OK.Name = "OK";
+            this.OK.Size = new System.Drawing.Size(70, 34);
+            this.OK.TabIndex = 3;
+            this.OK.Text = "تایید";
+            this.OK.UseVisualStyleBackColor = false;
+            this.OK.Click += new System.EventHandler(this.OK_Click);
             // 
             // ScaleSelector
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(371, 132);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(225, 147);
+            this.Controls.Add(this.OK);
+            this.Controls.Add(this.ingScale);
+            this.Controls.Add(this.smallerScale);
+            this.Controls.Add(this.biggerScale);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "ScaleSelector";
-            this.Text = "ScaleSelector";
+            this.Text = "انتخاب واحد شمارش";
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button biggerScale;
+        private System.Windows.Forms.Button smallerScale;
+        private System.Windows.Forms.ComboBox ingScale;
+        private System.Windows.Forms.Button OK;
     }
 }

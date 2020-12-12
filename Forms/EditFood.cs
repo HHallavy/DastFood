@@ -1,17 +1,38 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Drawing;
 using System.Windows.Forms;
+using DastFood.Classes;
 using DastFood.Classes.SQLite;
+using DastFood.Classes.Types;
 
 namespace DastFood.forms
 {
-    public partial class AddFood : Form
+    public partial class EditFood : Form
     {
         private IngredientSelector ingredientSelector;
-
-        public AddFood()
+        public Food FoodToEdit { get; internal set; }
+        public EditFood(Food FoodToEdit)
         {
             InitializeComponent();
+            if (FoodToEdit == null) Close();
+            
+            FoodCategory.Items.AddRange(FoodDB.GetFoodCategories());
+
+            this.FoodToEdit = FoodToEdit;
+            FoodName.Text = FoodToEdit.Name;
+
+            FoodCategory.Text = FoodToEdit.Category;
+
+            FoodSelfService.Checked = FoodToEdit.isSelfService;
+            FoodDetails.Text = FoodToEdit.Details;
+            
+            RecipeString = FoodToEdit.RecipeString;
+            List<RecipeIngredient> ingredients = Converter.ToRecipeList(RecipeString);
+            foreach (RecipeIngredient Ing in ingredients)
+            {
+                listIngredients.Items.Add(FoodDB.GetIngredient(Ing.IngId).name + " - " + Ing.IngAmount);
+            }
         }
 
         public string RecipeString { get; internal set; }
@@ -29,14 +50,21 @@ namespace DastFood.forms
         private void OK_Click(object sender, EventArgs e)
         {
             if (!ControlsOK()) return;
-            int errorCode = FoodDB.AddFood(
+            int errorCode = FoodDB.EditFood(
+                id: FoodToEdit.Id,
                 Name: FoodName.Text,
                 Ingredients: RecipeString,
                 SelfService: FoodSelfService.Checked,
                 Category: FoodCategory.Text,
                 Details: FoodDetails.Text
                 );
-            if(errorCode == 0) Close();
+            if(errorCode == 0)
+            {
+                ShowAllFood showAllFood = (ShowAllFood)Owner;
+                showAllFood.FillList();
+                showAllFood.FoodTable_RowEnter(null, null);
+                Close();
+            }
         }
 
         private bool ControlsOK()
@@ -49,11 +77,6 @@ namespace DastFood.forms
                 && FoodCategory.Text != ""
                 && listIngredients.Items.Count != 0
                 && RecipeString != "";
-        }
-
-        private void AddFood_Load(object sender, EventArgs e)
-        {
-            FoodCategory.Items.AddRange(FoodDB.GetFoodCategories());
         }
     }
 }

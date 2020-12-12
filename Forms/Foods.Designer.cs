@@ -29,69 +29,76 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Foods));
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btnNewFood = new System.Windows.Forms.Button();
+            this.btnEditFoods = new System.Windows.Forms.Button();
+            this.btnPrintMenu = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // button1
+            // btnNewFood
             // 
-            this.button1.Font = new System.Drawing.Font("B Nazanin", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(34, 50);
-            this.button1.Name = "button1";
-            this.button1.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.button1.Size = new System.Drawing.Size(181, 54);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "غذای جدید";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnNewFood.Font = new System.Drawing.Font("B Nazanin", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.btnNewFood.Image = ((System.Drawing.Image)(resources.GetObject("btnNewFood.Image")));
+            this.btnNewFood.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnNewFood.Location = new System.Drawing.Point(11, 12);
+            this.btnNewFood.Name = "btnNewFood";
+            this.btnNewFood.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnNewFood.Size = new System.Drawing.Size(182, 61);
+            this.btnNewFood.TabIndex = 0;
+            this.btnNewFood.Text = "غذای جدید";
+            this.btnNewFood.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnNewFood.UseVisualStyleBackColor = true;
+            this.btnNewFood.Click += new System.EventHandler(this.btnNewFood_Click);
             // 
-            // button2
+            // btnEditFoods
             // 
-            this.button2.Font = new System.Drawing.Font("B Nazanin", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(34, 120);
-            this.button2.Name = "button2";
-            this.button2.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.button2.Size = new System.Drawing.Size(181, 54);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "ویرایش غذاها";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnEditFoods.Font = new System.Drawing.Font("B Nazanin", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.btnEditFoods.Image = ((System.Drawing.Image)(resources.GetObject("btnEditFoods.Image")));
+            this.btnEditFoods.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnEditFoods.Location = new System.Drawing.Point(11, 81);
+            this.btnEditFoods.Name = "btnEditFoods";
+            this.btnEditFoods.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnEditFoods.Size = new System.Drawing.Size(182, 61);
+            this.btnEditFoods.TabIndex = 1;
+            this.btnEditFoods.Text = "ویرایش غذاها";
+            this.btnEditFoods.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnEditFoods.UseVisualStyleBackColor = true;
+            this.btnEditFoods.Click += new System.EventHandler(this.btnEditFoods_Click);
             // 
-            // button3
+            // btnPrintMenu
             // 
-            this.button3.Font = new System.Drawing.Font("B Nazanin", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
-            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.Location = new System.Drawing.Point(34, 189);
-            this.button3.Name = "button3";
-            this.button3.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.button3.Size = new System.Drawing.Size(181, 54);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "چاپ منوی غذا";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnPrintMenu.Font = new System.Drawing.Font("B Nazanin", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.btnPrintMenu.Image = ((System.Drawing.Image)(resources.GetObject("btnPrintMenu.Image")));
+            this.btnPrintMenu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPrintMenu.Location = new System.Drawing.Point(11, 150);
+            this.btnPrintMenu.Name = "btnPrintMenu";
+            this.btnPrintMenu.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnPrintMenu.Size = new System.Drawing.Size(182, 61);
+            this.btnPrintMenu.TabIndex = 2;
+            this.btnPrintMenu.Text = "چاپ منوی غذا";
+            this.btnPrintMenu.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnPrintMenu.UseVisualStyleBackColor = true;
+            this.btnPrintMenu.Visible = false;
             // 
             // Foods
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(248, 295);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(205, 221);
+            this.Controls.Add(this.btnPrintMenu);
+            this.Controls.Add(this.btnEditFoods);
+            this.Controls.Add(this.btnNewFood);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "Foods";
-            this.Text = "Foods";
+            this.Text = "غذا ها";
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btnNewFood;
+        private System.Windows.Forms.Button btnEditFoods;
+        private System.Windows.Forms.Button btnPrintMenu;
     }
 }

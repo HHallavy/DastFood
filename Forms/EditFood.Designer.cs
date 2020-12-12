@@ -1,6 +1,6 @@
 ﻿namespace DastFood.forms
 {
-    partial class AddFood
+    partial class EditFood
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddFood));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EditFood));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -100,7 +100,7 @@
             this.OK.Name = "OK";
             this.OK.Size = new System.Drawing.Size(74, 32);
             this.OK.TabIndex = 4;
-            this.OK.Text = "تایید";
+            this.OK.Text = "ویرایش";
             this.OK.UseVisualStyleBackColor = false;
             this.OK.Click += new System.EventHandler(this.OK_Click);
             // 
@@ -177,7 +177,7 @@
             this.listIngredients.Size = new System.Drawing.Size(239, 76);
             this.listIngredients.TabIndex = 12;
             // 
-            // AddFood
+            // EditFood
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -195,9 +195,8 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Name = "AddFood";
-            this.Text = "اضافه کردن غذا";
-            this.Load += new System.EventHandler(this.AddFood_Load);
+            this.Name = "EditFood";
+            this.Text = "ویرایش غذا";
             this.ResumeLayout(false);
             this.PerformLayout();
 
