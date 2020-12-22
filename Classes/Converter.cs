@@ -47,6 +47,11 @@ namespace DastFood.Classes
                 + "/" + Shamsi.GetMonth(miladiDate).ToString().PadLeft(2,'0') 
                 + "/" + Shamsi.GetDayOfMonth(miladiDate).ToString().PadLeft(2, '0');
         }
+        public static string ShamsiDay(DateTime miladiDate)
+        {
+            PersianCalendar Shamsi = new PersianCalendar();
+            return Shamsi.GetDayOfMonth(miladiDate).ToString();
+        }
 
         /// <summary>
         /// Subtracts one amount from another with different scales (firstAmount - secondAmount)

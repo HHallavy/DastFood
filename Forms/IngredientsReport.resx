@@ -142,4 +142,11 @@
         RK5CYII=
 </value>
   </data>
+  <data name="changeChartView.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABEAAAARCAYAAAA7bUf6AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        wwAADsMBx2+oZAAAAFFJREFUOE/tzNENgDAMA9FM0JmyGaMbLBSpnLwBRXp8pNaVpOj5/PvgZsSjMWDc
+        jHg0BoybEY/GgHEz4tEYMG5G1bVE78MvIt0tOpET2eVI6wb+IygEBVkukgAAAABJRU5ErkJggg==
+</value>
+  </data>
 </root>

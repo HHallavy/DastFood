@@ -25,6 +25,8 @@ namespace DastFood
         private void MainMenuForm_Load(object sender, EventArgs e)
         {
             // Testing  Testing ...
+            IngredientsReport report = new IngredientsReport();
+            report.Show();
         }
 
         private void btnFoods_Click(object sender, EventArgs e)

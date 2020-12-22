@@ -2,8 +2,6 @@
 
 namespace DastFood.Classes
 {
-    // This class converts numbers to Persian words that represent them.
-        //    Like 123 = صد و بیست و سه
     static class Horof
     {
         private static string[/*20*/] AlphaNumeric1;

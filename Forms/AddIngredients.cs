@@ -33,12 +33,14 @@ namespace DastFood.forms
         private void btnSelectDate_Click(object sender, System.EventArgs e)
         {
             if(dateSelector == null || dateSelector.IsDisposed)
+            {
                 dateSelector = new DateSelector();
-            dateSelector.OK.Click += delegate 
-            { 
-                if(dateSelector.DateIsOK())
-                    IngExpireDate.Text = dateSelector.manualDate.Text;
-            };
+                dateSelector.OK.Click += delegate
+                {
+                    if (dateSelector.DateIsOK())
+                        IngExpireDate.Text = dateSelector.manualDate.Text;
+                };
+            }
             dateSelector.Show();
             UIHelper.MakeFormAboveButton(btnSelectDate, dateSelector);
         }
